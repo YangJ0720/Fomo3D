@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
         mList?.add("http://ddex.io")
         mList?.add("http://117.50.16.115:8601/Exchange")
         mList?.add("https://seele.skrskr.online/index")
-        mList?.add("https://www.hao123.com")
     }
 
     private fun initView() {

@@ -45,17 +45,10 @@ class JSWebView : WebView {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             WebView.setWebContentsDebuggingEnabled(true)
         }
-        settings.builtInZoomControls = false
         settings.allowContentAccess = true
-        settings.blockNetworkImage = false
-        settings.blockNetworkLoads = false
-        settings.builtInZoomControls = false
-        settings.cursiveFontFamily = "cursive"
         settings.databaseEnabled = true
         settings.displayZoomControls = true
         settings.domStorageEnabled = true
-        settings.fantasyFontFamily = "fantasy"
-        settings.fixedFontFamily = "monospace"
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
             settings.mediaPlaybackRequiresUserGesture = true
         }
@@ -65,9 +58,6 @@ class JSWebView : WebView {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             settings.safeBrowsingEnabled = false
         }
-        settings.sansSerifFontFamily = "sans-serif"
-        settings.serifFontFamily = "serif"
-        settings.standardFontFamily = "sans-serif"
         // 如果访问的页面中要与Javascript交互，则WebView必须设置支持Javascript
         settings.javaScriptEnabled = true
         // 支持通过JS弹窗
@@ -154,7 +144,7 @@ class JSWebView : WebView {
         val rpc = "https://mainnet.infura.io/llyrtzQ3YhkdESt2Fzrk"
         val chainID = "1"
         // kovan
-        // val address = "0xcc2df29b38742ae73fe72dcf0b9aaa0cbf91d27a"
+//        val address = "0xcc2df29b38742ae73fe72dcf0b9aaa0cbf91d27a"
 //        val rpc = "https://kovan.infura.io/llyrtzQ3YhkdESt2Fzrk"
 //        val chainID = "42"
         // 拼接JS文件内容
