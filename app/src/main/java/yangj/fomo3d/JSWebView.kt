@@ -3,13 +3,14 @@ package yangj.fomo3d
 import android.content.Context
 import android.graphics.Bitmap
 import android.os.Build
-import android.os.Handler
 import android.util.AttributeSet
 import android.util.Log
 import android.view.View
-import android.webkit.*
+import android.webkit.WebChromeClient
+import android.webkit.WebSettings
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.ProgressBar
-import java.io.ByteArrayOutputStream
 
 /**
  * @author YangJ
@@ -87,8 +88,7 @@ class JSWebView : WebView {
 
             override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
                 super.onPageStarted(view, url, favicon)
-                WebIconDatabase.getInstance().retainIconForPageUrl(url)
-                if (mProgressBar?.visibility == View.GONE) {
+                if (mProgressBar?.visibility != View.VISIBLE) {
                     mProgressBar?.visibility = View.VISIBLE
                 }
                 if (mInjection) {
@@ -111,7 +111,7 @@ class JSWebView : WebView {
 
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
-                if (mProgressBar?.visibility == View.VISIBLE) {
+                if (mProgressBar?.visibility != View.GONE) {
                     mProgressBar?.visibility = View.GONE
                 }
                 Log.v("JSWebView", "onPageFinished")

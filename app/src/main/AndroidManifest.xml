@@ -21,7 +21,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".SendActivity" />
-        <activity android:name=".BrowserActivity"/>
+        <activity
+            android:name=".BrowserActivity"
+            android:process=":browser" />
     </application>
 
 </manifest>
