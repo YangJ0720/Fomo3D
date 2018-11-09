@@ -69,10 +69,10 @@ override fun onPageFinished(view: WebView?, url: String?) {
 
 ------
 #### 4.以太坊Dapp交互
-将JS文件注入到页面之后执行相关合约操作就可以主动调起Android Native了，例如：
-1.在Dapp中购买钥匙主动调起Android Native执行转账
-2.在Android Native执行转账完成后回调Dapp通知转账完毕
-3.或者Android Native执行转账然后取消转账，也需要回调Dapp通知转账取消
+将JS文件注入到页面之后执行相关合约操作就可以主动调起Android Native了，例如：<br>
+1.在Dapp中购买钥匙主动调起Android Native执行转账<br>
+2.在Android Native执行转账完成后回调Dapp通知转账完毕<br>
+3.或者Android Native执行转账然后取消转账，也需要回调Dapp通知转账取消<br>
 由Android Native回调Dapp的代码如下：
 ```
 Handler().postDelayed({
