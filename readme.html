@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+        <div class="Box-body p-6">
+                <article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-android客户端与以太坊dapp交互" class="anchor" aria-hidden="true" href="#android客户端与以太坊dapp交互"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Android客户端与以太坊Dapp交互</h1>
+        <pre><code>这应该是目前全网Android WebView与以太坊Dapp交互最全的Demo
+        </code></pre>
+        <h2><a id="user-content-apk下载" class="anchor" aria-hidden="true" href="#apk下载"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>apk下载</h2>
+        <p><a href="https://github.com/YangJ0720/Fomo3D/blob/master/apk/app-debug.apk" download>下载apk点我</a></p>
+        <h2><a id="user-content-效果图" class="anchor" aria-hidden="true" href="#效果图"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>效果图</h2>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/YangJ0720/Fomo3D/blob/master/gif/fomo3d.gif"><img src="https://github.com/YangJ0720/Fomo3D/raw/master/gif/fomo3d.gif" width="480" height="800" style="max-width:100%;"></a></p>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/YangJ0720/Fomo3D/blob/master/gif/cae4d.gif"><img src="https://github.com/YangJ0720/Fomo3D/raw/master/gif/cae4d.gif" width="480" height="800" style="max-width:100%;"></a></p>
+        <h2><a id="user-content-要点" class="anchor" aria-hidden="true" href="#要点"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>要点</h2>
+        <hr>
+        <h4><a id="user-content-1获得以太坊合约js文件" class="anchor" aria-hidden="true" href="#1获得以太坊合约js文件"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.获得以太坊合约JS文件</h4>
+        <p>这个以太坊合约JS文件我是直接从Trust Wallet反编译得到，一共两个文件分别为：<br>
+        <code>init.js</code><br>
+        <code>tiger.js</code><br>
+        文件名我改过了不必在意，其中init.js是我们特别需要关注的，这个文件前三行代码如下：</p>
+        <pre><code>const addressHex = "%1$s";
+        const rpcURL = "%2$s";
+        const chainID = "%3$s";
+        </code></pre>
+        <p>这里我已经修改好了，他们分别代表 <strong>钱包地址</strong>、<strong>以太坊主网和测试网络节点</strong>、<strong>区块链网络ID</strong> ，稍后我们会用到
+        <br>
+        继续往下关注这几个地方：</p>
+        <pre><code>tiger.signTransaction(id, tx.to || null, tx.value, nonce, gasLimit, gasPrice, data);
+        ...
+        tiger.signMessage(id, data);
+        ...
+        tiger.signPersonalMessage(id, data);
+        ...
+        tiger.signTypedMessage(id, JSON.stringify(data))
+        ...
+        </code></pre>
+        <p>这里的tiger会对应Native中的Java对象，在Android代码中设置addJavascriptInterface第二个参数就对应这里的tiger</p>
+        <p>还有就是主网和测试网设置，如下：</p>
+        <pre><code>// main net
+        val address = "0xf22978ed49631b68409a16afa8e123674115011e"
+        val rpc = "https://mainnet.infura.io/llyrtzQ3YhkdESt2Fzrk"
+        val chainID = "1"
+        // kovan
+        val address = "0xcc2df29b38742ae73fe72dcf0b9aaa0cbf91d27a"
+        val rpc = "https://kovan.infura.io/llyrtzQ3YhkdESt2Fzrk"
+        val chainID = "42"
+        </code></pre>
+        <p>测试网就可以在未正式发布的合约中开发测试</p>
+        <hr>
+        <h4><a id="user-content-2注入js时机" class="anchor" aria-hidden="true" href="#2注入js时机"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2.注入JS时机</h4>
+        <p>一般情况下我们用都是在页面加载完毕的时候注入JS代码，例如在：</p>
+        <pre><code>override fun onPageFinished(view: WebView?, url: String?) {
+          super.onPageFinished(view, url)
+          // 执行JS注入操作
+        }
+        </code></pre>
+        <p>但是在本例中，assets文件夹中的两个JS文件必须在页面刚开始加载的时候执行注入否则会注入失败。我是在onPageStarted中注入的</p>
+        <hr>
+        <h4><a id="user-content-3注入js版本问题" class="anchor" aria-hidden="true" href="#3注入js版本问题"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.注入JS版本问题</h4>
+        <p>在Android中注入JS有两个方法分别是 <strong>loadUrl()</strong> 和 <strong>evaluateJavascript()</strong><br>
+        如果是币圈的朋友可能会发现各大钱包均只支持Android 5.0以上版本，因为loadUrl这个方法注入这两个JS文件的时候始终是注入失败的，具体原因没有深究。不过这里可以通过远程注入JS的方式实现，但但但但是这种方式受到网络影响注入成功需要一定的时间，体验很差不建议</p>
+        <hr>
+        <h4><a id="user-content-4以太坊dapp交互" class="anchor" aria-hidden="true" href="#4以太坊dapp交互"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.以太坊Dapp交互</h4>
+        <p>将JS文件注入到页面之后执行相关合约操作就可以主动调起Android Native了，例如：<br>
+        1.在Dapp中购买钥匙主动调起Android Native执行转账<br>
+        2.在Android Native执行转账完成后回调Dapp通知转账完毕<br>
+        3.或者Android Native执行转账然后取消转账，也需要回调Dapp通知转账取消<br>
+        由Android Native回调Dapp的代码如下：</p>
+        <pre><code>Handler().postDelayed({
+            if (TextUtils.isEmpty(hash)) {
+                if (Build.VERSION.SDK_INT &lt;= Build.VERSION_CODES.KITKAT) {
+                    webView.loadUrl("javascript:executeCallback(8888, \"cancelled\", null)")
+                } else {
+                    webView.evaluateJavascript("executeCallback(8888, \"cancelled\", null)", null)
+                }
+            } else {
+                if (Build.VERSION.SDK_INT &lt;= Build.VERSION_CODES.KITKAT) {
+                    webView.loadUrl("javascript:executeCallback(8888, null, \"$hash\")")
+                } else {
+                    webView.evaluateJavascript("executeCallback(8888, null, \"$hash\")", null)
+                }
+            }
+        }, 50)
+        </code></pre>
+        <p>可以看到取消交易只需要传入 <strong>cancelled</strong> 就可以了，如果转账完成需要拿到服务端提供的交易hash值并传入。<br>
+        对了，这里一定要有一定的延时，就像我延时了50毫秒。不然的话有可能你会遇到某Dapp不能把正在交易的对话框关闭</p>
+        </article>
+              </div>
+</body>
+
+</html>
